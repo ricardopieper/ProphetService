@@ -14,7 +14,6 @@
 #include <map>
 #include "../TaskRunner/Task.hpp"
 
-using namespace std::chrono_literals;
 
 class TaskBasicDataProcess {
 
@@ -46,7 +45,7 @@ public:
 		int colIdx = 1;
 		for (std::string col : cols) {
 			Mtx column = (*data)(_, _(colIdx, colIdx));
-			
+
 			double avg = Avg(column);
 
 			avgs.emplace("avg"+col, avg);

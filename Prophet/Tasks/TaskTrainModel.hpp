@@ -14,7 +14,6 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std::chrono_literals;
 class TaskTrainModel : public Task {
 private:
 
@@ -23,7 +22,7 @@ private:
 		//Mtx::IndexVariable i, j;
 		Underscore<Mtx::IndexType> _;
 
-		//Mtx dataset = *(new Mtx()); 
+		//Mtx dataset = *(new Mtx());
 
 		Mtx* ds = unprocessed->GetDataset();
 
@@ -155,7 +154,7 @@ private:
 		//Mtx::IndexVariable i, j;
 		Underscore<Mtx::IndexType> _;
 
-		//Mtx dataset = *(new Mtx()); 
+		//Mtx dataset = *(new Mtx());
 
 		if (ds != nullptr) {
 			//feature scaling

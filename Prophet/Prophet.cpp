@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 	Task *uploads = new TaskProcessUpload()
 		 , *trainModel = new TaskTrainModel()
 		 , *performPredictions = new TaskPerformPredictions()
-		, *test = new TaskTestModel()
+		//, *test = new TaskTestModel()
 		;
 
 	std::vector<TaskRunner*> tasks = {
@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 		TaskRunner::RunTask(performPredictions)
 		//TaskRunner::RunTask(test)
 	};
-	
+
 	for (auto task : tasks) {
 		task->Start();
 	}
@@ -34,15 +34,14 @@ int main(int argc, char** argv) {
 	for (auto task : tasks) {
 		task->Wait();
 	}
-	
+
 	for (auto task : tasks) {
 		delete task;
 	}
 
-    //delete uploads;
-	//delete trainModel;
-	//delete performPredictions;
+    delete uploads;
+	delete trainModel;
+	delete performPredictions;
 
 
 }
-

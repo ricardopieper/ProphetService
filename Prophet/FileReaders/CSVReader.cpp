@@ -1,4 +1,4 @@
-#pragma once
+
 #include "CSVReader.hpp"
 #include <vector>
 using namespace std;
@@ -74,7 +74,7 @@ Mtx* CSVReader::GetMatrix()
 
 	bool headerSkipped = false;
 	std::vector<std::vector<double>> allRows;
-	int numerCols = header.size();
+	int numCols = header.size();
 
 	std::vector<std::string> lines = split(file, '\n');
 
@@ -89,7 +89,7 @@ Mtx* CSVReader::GetMatrix()
 
 		auto cols = split(line, ',');
 
-		if (cols.size() != numerCols) {
+		if (cols.size() != numCols) {
 			throw "Invalid CSV file: Header size != Line size at line " + std::to_string(lineIndex);
 		}
 

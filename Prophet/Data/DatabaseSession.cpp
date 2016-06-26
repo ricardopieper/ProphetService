@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _DATABASESESSION_CPP_
 #define _DATABASESESSION_CPP_
 #include "DatabaseSession.hpp"
@@ -41,12 +39,12 @@ DatabaseSession::DatabaseSession(char* host) {
 	if (rc != CASS_OK) {
 		cass_cluster_free(m_cluster);
 		cass_session_free(m_session);
-		
+
 		std::string err = "Couldn't connect to the Cassandra Database: "
 			+ CassandraUtils::GetCassandraError(connect_future);
-		
+
 		cass_future_free(connect_future);
-		
+
 		throw err;
 
 	}

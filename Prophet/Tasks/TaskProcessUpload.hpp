@@ -13,10 +13,9 @@
 #include <vector>
 #include "../TaskRunner/Task.hpp"
 
-using namespace std::chrono_literals;
 class TaskProcessUpload : public Task {
 private:
-	
+
 	bool Contains(std::vector<std::string> vec, std::string elem) {
 		auto it = std::find(vec.begin(), vec.end(), elem);
 
@@ -84,7 +83,7 @@ private:
 
 		delete m;
 	}
-	
+
 
 public:
 	void Run() {

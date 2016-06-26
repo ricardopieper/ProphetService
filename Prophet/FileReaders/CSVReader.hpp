@@ -14,6 +14,6 @@ private:
 public:
 	CSVReader(std::string file);
 	std::vector<std::string> GetHeader();
-	Mtx* CSVReader::GetMatrix();
+	Mtx* GetMatrix();
 };
 #endif

@@ -1,4 +1,6 @@
 #include "Task.hpp"
+#include <chrono>
+#include <iostream>
 
 class TaskRunner {
 private:
@@ -15,7 +17,7 @@ private:
 			catch (std::string& err) {
 				std::cout << "Error: " << err << std::endl;
 			}
-			std::this_thread::sleep_for(2s);
+			std::this_thread::sleep_for(std::chrono::seconds(2));
 		}
 	}
 
