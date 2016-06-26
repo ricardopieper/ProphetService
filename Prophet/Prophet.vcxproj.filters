@@ -1,0 +1,4572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Prophet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\DatabaseSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReaders\CSVReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\fmincg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReaders\FlensCsv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\cxxblas\cxxblas.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\cxxlapack\netlib\interface\dummy.in.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\cxxlapack\cxxlapack.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\asum\asum_sub.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\dot\dot_sub.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\iamax\iamax_sub.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\nrm2\nrm2_sub.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\axpy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\copy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\gbmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\gemm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\gemv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\ger.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hbmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hemm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hemv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\her.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\her2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\her2k.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\herk.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hpmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hpr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\hpr2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\rot.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\rotg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\rotm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\rotmg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\sbmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\scal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\spmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\spr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\spr2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\swap.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\symm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\symv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\syr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\syr2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\syr2k.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\syrk.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\tbmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\tbsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\tpmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\tpsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\trmm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\trmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\trsm.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\trsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\blas\interface\blas\xerbla.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\debug\auxiliary\closurelog.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\debug\auxiliary\closurelogstream.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\debug\auxiliary\variablepool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\addingvectors.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\addingvectors_bench.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\complex-densevector-views.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\complex-gematrix-views.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\design-flaws-mtl4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\elementwise-ops.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\geccs-setup-example01.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\geccs-superlu.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\gecoord-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\gecrs-setup-example01.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\gecrs-superlu.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\gematrix-indexvariable.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\howto-conjugate.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gelqf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gels-case1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gels-case2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gels-case3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gels-case4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gelsy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-geqp3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-geqrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-gesv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-getri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-getrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-heev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-posv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-potri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-potrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-trtri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-trtrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-unglq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-ungqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-complex-unmqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gbsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gbtrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-geev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gelqf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gels-case1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gels-case2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gels-case3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gels-case4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gelsy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-geqp3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-geqrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-gesv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-getri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-getrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-orglq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-orgqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-ormqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-pbsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-pbtrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-posv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-potri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-potrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-simple-geqrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-trtri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-trtrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-wrapper2-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lapack-wrapper-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lu_blk-test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\lu_unblk-test.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\mpfr-real-lapack-geev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\mpfr-real-lapack-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\my_symatrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\permutation.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\qd-lapack-geev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\qd-lapack-getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\sycrs-cg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\symatrix-cg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tiny_gemv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tinyarray.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tinyfullstorage.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\trmatrix-indexvariable.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page01-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page02-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page03-example01.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page03-example02.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page03-example03.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page03-example04.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page04-example01.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut01-page04-example02.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut02-page01-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut02-page02-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut02-page03-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut02-page04-example1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut02-page04-example2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut03-page01-example.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page01-example1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page01-example2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page02-example1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page02-example2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page02-example3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page02-example4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut05-page02-example5.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut08-page01-example1.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut08-page01-example2.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut08-page01-example3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut08-page01-example4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\tut08-page01-example5.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\examples\vecadd.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gecon.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geequ.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gees.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geesx.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geevx.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gejsv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gelqf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gels.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gelsy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geqp3.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\geqrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gerfs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gesv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gesvj.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\gesvx.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\getrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\getri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\getrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\heev.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\lamch.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\laqge.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\latrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\lsame.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\lsamen.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\orglq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\orgqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\ormlq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\ormqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\pocon.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\posv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\potrf.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\potri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\potrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\trtri.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\trtrs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\unglq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\ungqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\unmlq.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\unmqr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\lapack\interface\src\xdummy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\geccsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\geccsmv-complex.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\gecrsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\gecrsmv-complex.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\heccsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\hecrsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\syccsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\test\sycrsmv.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\flens\flens.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-bicgstab.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-cg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-cgs.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-determinant.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-fft-export-wisdom.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-fft-float.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-fft-import-wisdom.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-fft-matrix.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-fft-vector.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-mkldss.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-mpi-bcast.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-mpi-reduce.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-mpi-send.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-pcg.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-ptfqmr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-suitesparse.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-superlu.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-tfqmr.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\playground\flens\examples\example-trace.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\FLENS\example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data\Model.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\DatabaseSession.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks\TaskProcessUpload.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\Upload.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReaders\CSVReader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ModelDatasets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks\TaskTrainModel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ModelParams.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks\TaskPerformPredictions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskRunner\TaskRunner.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskRunner\Task.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\FlensDefs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\fmincg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\Variables.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\Converters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ModelPredictions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\Functions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks\TaskBasicDataProcess.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\BasicModelView.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReaders\FlensCsv.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\auxiliary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\complex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\complextrait.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\debugmacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\fakeuse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\iscomplex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\ismpfrreal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\issame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\pow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\auxiliary\restrictto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\atlas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\cblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\drivers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\gotoblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\mklblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\openblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\refblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\sparseblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\drivers\veclib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\asum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\dot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\iamax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\level1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\nrm2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\rot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\rotm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\scal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1\swap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\acxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\acxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\asum1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\axpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\ccopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\dot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gbaxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gbaxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gbcopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gbcotr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gbscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\geaxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\geaxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gecopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gecotr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\geraxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gerscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\gescal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\geswap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\hescal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\imax1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\level1extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\racxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\raxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\rscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\syscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\tpaxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\tpaxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\tpcopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\tpscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\traxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\traxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\trcopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level1extensions\trscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\gbmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\gemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\ger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\hbmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\hemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\her.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\her2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\hpmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\hpr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\hpr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\level2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\sbmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\spmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\spr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\spr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\symv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\syr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\syr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\tbmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\tbsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\tpmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\tpsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\trmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2\trsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\gbmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\gemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\hemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\her.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\her2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\level2extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\symv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\trmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level2extensions\trsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\gemm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\hemm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\her2k.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\herk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\level3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\symm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\syr2k.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\syrk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\trmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3\trsm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3extensions\gbmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3extensions\hbmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3extensions\level3extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3extensions\sbmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\level3extensions\tbmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\gecrsmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\heccsmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\hecrsmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\sparselevel2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\syccsmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\sycrsmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\trccssv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel2\trcrssv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\gecrsmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\heccsmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\hecrsmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\sparselevel3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\syccsmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\sycrsmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\trccssm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\sparselevel3\trcrssm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\acxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\acxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\axpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\ccopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\geaxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\gecopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\gerscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\gescal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\rscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\scal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel1\tinylevel1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel2\gemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\tinylevel2\tinylevel2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\cxxblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxblas\typedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\bbcsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\bdsdc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\bdsqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\cgesv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\chla_transtype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\cposv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\disna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\dspcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbbrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbequ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbequb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbtf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbtrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gbtrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gebak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gebal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gebd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gebrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gecon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geequ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geequb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geesx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gegs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gegv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gehd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gehrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gejsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelq2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelqf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelsx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gelsy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geql2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqlf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqp3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqpf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqr2p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\geqrfp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gerfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gerq2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gerqf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesdd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesvj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gesvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\getc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\getf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\getrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\getri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\getrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggbak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggbal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggesx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggglm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gghrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gglse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggqrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggrqf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggsvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ggsvp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gsvj0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gsvj1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gtcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gtrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gtsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gtsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gttrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gttrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\gtts2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbgst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbgv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbgvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbgvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hbtrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hecon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heequb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heevr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hegs2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hegst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hegv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hegvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hegvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\herfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hesv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hesvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\heswapr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetri2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetri2x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hetrs2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hfrk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hgeqz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpgst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpgv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpgvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpgvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hprfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hpsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hptrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hptrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hptri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hptrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hsein.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\hseqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ieeeck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilalc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilalr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilaslc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilaslr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilaver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilazlc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ilazlr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\isnan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\izmax1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gbamv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gbrcond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gbrcond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gbrcond_x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gbrpvgrw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_geamv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gercond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gercond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_gercond_x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_heramv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_hercond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_hercond_x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_herpvgrw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_lin_berr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_porcond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_porcond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_porcond_x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_porpvgrw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_rpvgrw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_syamv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_syrcond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_syrcond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_syrcond_x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_syrpvgrw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\la_wwaddw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\labad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\labrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacgv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacn2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lacrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ladiv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lae2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laebz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laed9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laeda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laein.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laesy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laev2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laexc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lag2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lag2c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lag2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lag2s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lag2z.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lags2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lagtf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lagtm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lagts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lagv2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lahef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lahqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lahr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lahrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laic1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laisnan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laln2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lals0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lalsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lalsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lamch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lamrg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laneg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\langb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\langt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanhb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanhe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanhf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanhp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanhs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanht.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lansb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lansf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lansp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lansy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lantb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lantp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lantr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lanv2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lapll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lapmr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lapmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laprec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lapy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lapy3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqgb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqhb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqhe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqhp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqr5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqsb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqsp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqsy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laqtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lar1v.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lar2v.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larcm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larfb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larfgp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\largv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larnv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larrv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larscl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lartg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lartgp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lartgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lartv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laruv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larzb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\larzt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\las2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lascl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lascl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasd8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasdq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasdt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasq6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lassq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasv2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\laswp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lasyf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lat2c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lat2s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latbs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latdf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latrans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\latzm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lauplo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lauu2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lauum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lsame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\lsamen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\opgtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\opmtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orbdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orcsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\org2l.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\org2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orghr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orglq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgrq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orgtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orm2l.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orm2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormhr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\orml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormlq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormrq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ormtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbequ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbstf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbtf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbtrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pbtrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pftrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pftri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pftrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pocon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\poequ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\poequb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\porfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\posv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\posvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\potf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\potrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\potri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\potrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ppcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ppequ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pprfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ppsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ppsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pptrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pptri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pptrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pstf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pstrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ptcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pteqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ptrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ptsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ptsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pttrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\pttrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ptts2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\rot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\rscl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbgst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbgv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbgvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbgvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sbtrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sfrk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sgesv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spgst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spgv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spgvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spgvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sposv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sprfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\spsvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sptrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sptrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sptri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sptrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stebz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stedc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stegr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stein.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stemr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\steqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sterf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stevr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\stevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sycon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syequb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syevd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syevr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syevx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sygs2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sygst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sygv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sygvd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sygvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\symv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sysv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sysvx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\syswapr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytri2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytri2x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\sytrs2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tbcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tbrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tbtrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tfsm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tftri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tfttp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tfttr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgevc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgex2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgexc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgsen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgsja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgsna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgsy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tgsyl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tpcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tprfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tptri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tptrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tpttf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tpttr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trevc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trexc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trrfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trsen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trsna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trsyl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trti2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trtri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trtrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trttf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\trttp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tzrqf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\tzrzf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unbdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\uncsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ung2l.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ung2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unghr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unglq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungrq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\ungtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unm2l.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unm2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmbr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmhr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmlq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmrq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\unmtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\upgtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\upmtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\interface\zsum1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\netlib\interface\lapack.in.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\netlib\netlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxlapack\cxxlapack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cassert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cctype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\complex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cstddef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cstdio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cstdlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\cstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\fstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\functional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\iomanip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\iostream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\limits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\sstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\type_traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\cxxstd\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\external\real.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\auxiliary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\compatiblescalar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\compatibletype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\complextrait.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\constref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\elementtype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\explicit_cast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\hasengine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\ifelseif.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\indextype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\iscomplex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isconvertible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isgeneralmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\ishermitianmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isinteger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\ismatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\ismatrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isreal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\issame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\issymmetricmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\istriangularmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isvector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\isvectorclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\max.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\min.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\noview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\promotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\quadruple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\randomvalue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\range.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\removeref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\restrictto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\triple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\auxiliary\underscore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\auxiliary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\debugclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\prune.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\prunematrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\prunevectorclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\auxiliary\result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\copyconj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\copyrscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\copyscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\copysum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\dot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level1\level1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level2\level2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level2\mv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level2\mvswitch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level3\level3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level3\mm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\level3\mmswitch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\defaulteval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\mm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\mv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\r2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\r2k.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\rk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\tweaks\tweaks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\closures\closures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\interface\blas\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\asum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\cotr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\dot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\iamax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\level1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\nrm2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\raxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\rot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\rotm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\rscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\scal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1\swap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\copy\copyconj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\copy\imagmatrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\copy\realmatrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\acxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\acxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\asum1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\axpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\conj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\imax1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\level1extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level1extensions\racxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level2\level2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level2\mv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level2\r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level2\r2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level2\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level3\level3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level3\mm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level3\r2k.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level3\rk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\level3\sm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opadd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opconj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opconjtrans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opdiv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\operators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opminus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opmult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\opsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\operators\optrans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\assign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\blas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\blaslogclear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\blaslogoff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\blas\blaslogon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\auxiliary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\basename.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\closurelog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\closurelogstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\typeid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\variablepool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\auxiliary\verbalizeclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\debug\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\cg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\cg_blas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\lu_blk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\lu_unblk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\my_symatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\permutation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\simple_et.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\simple_et2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\tut05-mylapack-version1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\tut05-mylapack-version2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\examples\tut05-mylapack-version3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\hacks\hacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\hacks\mpfr_real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\hacks\qd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\hacks\std.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\hacks\tostring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\array\load.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\array\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\array\save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\bandstorage\load.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\bandstorage\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\bandstorage\save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\ccs\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\coordstorage\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\crs\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\fullstorage\load.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\fullstorage\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\fullstorage\save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\packedstorage\load.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\packedstorage\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\packedstorage\save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\tinyarray\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\tinyfullstorage\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\io\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\auxiliary\getf77char.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\auxiliary\nint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\auxiliary\sign.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\debug\hex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\debug\isidentical.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\gb\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\gb\tf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\gb\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\gb\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\bak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\bal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\cond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\equ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\es.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\esx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\evx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\hd2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\hrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\jsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\lq2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\lqf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\ls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\lsy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\qp3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\qr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\qrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\qrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\rfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\rscl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\svd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\svj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\svj0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\svj1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\svx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\tf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\ge\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hb\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\td2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\trd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\he\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hp\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hp\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hp\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hp\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\hp\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\hseqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\iparmq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\org2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orghr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orgl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orglq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orgqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orm2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ormhr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\orml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ormlq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ormqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ormr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ormrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\steqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\sterf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\trevc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\trexc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\trsen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\trsna.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\trsyl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\tzrzf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ung2l.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ung2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unghr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ungl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unglq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ungql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ungqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\ungtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unm2r.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unmhr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unml2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unmlq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unmqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unmr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\impl\unmrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\interface\include\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\ilaenv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\ilalc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\ilalr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\labad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lacn2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\ladiv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lae2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laev2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laexc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lahqr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lahr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laic1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laln2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lamch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lanst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lanv2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lapy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lapy3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqr5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laqtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larfb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lartg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larzb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\larzt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lascl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lasr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lasrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lassq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\laswp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lasy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\latrd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\latrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\latrz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lauu2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\la\lauum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\pb\pbsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\pb\pbtrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\pb\pbtrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\pocon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\posv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\potf2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\potrf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\potri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\po\potrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sb\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sp\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sp\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sp\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sp\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sp\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sy\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sy\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sy\trf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sy\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\sy\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tb\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tp\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tp\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tr\ti2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tr\tri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\tr\trs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\lapack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\lapack\typedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\ge\constelementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\ge\elementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\ge\initializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\diagmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\gbmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\geccsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\gecoordmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\gecrsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\gematrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\getinymatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\imagmatrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\impl\realmatrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\general\generalmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\hbmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\heccsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\hecoordmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\hecrsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\hematrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\hpmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\hermitian\hermitianmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\impl\matrixclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\sbmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\spmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\syccsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\sycoordmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\sycrsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\impl\symatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\symmetric\symmetricmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\tr\constelementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\tr\elementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\tbmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\tpmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\trccsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\trcoordmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\trcrsmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\impl\trmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\triangular\triangularmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\matrixtypes\matrixtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\abs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\acos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\asin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\atan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\atan2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\complex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\cos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\div.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\double.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\exp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\imag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\minus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\mult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\plus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\pow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\scalaroperations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\sin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\sqrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalaroperations\tan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\impl\indexvariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\impl\scalarclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\impl\scalarvalue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\scalar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\scalartypes\scalartypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\arrayview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\constarrayview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\hasarraystorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\imagarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\isarraystorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\array\realarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\bandstorage\bandstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\bandstorage\bandstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\bandstorage\constbandstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\bandstorage\hasbandstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\bandstorage\isbandstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\ccs\ccs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\coordstorage\coordstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\crs\crs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\constfullstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\fullstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\fullstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\hasfullstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\isfullstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\fullstorage\trapezoidalfill.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\packedstorage\constpackedstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\packedstorage\haspackedstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\packedstorage\ispackedstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\packedstorage\packedstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\packedstorage\packedstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyarray\tinyarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyarray\tinyarrayview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyarray\tinyconstarrayview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyfullstorage\tinyconstfullstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyfullstorage\tinyfullstorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\tinyfullstorage\tinyfullstorageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\defaultindexoptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\indexoptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\storage\storage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\auxiliary\imagvector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\auxiliary\realvector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\dv\constelementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\dv\elementclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\dv\initializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\densevector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\tinyvector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\impl\vectorclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\vectortypes\vectortypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\flens.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\typedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\typeinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\flens\verbose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\addtranspose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\auxiliary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\blocksize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\cachesize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\distaligned.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\isaligned.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\auxiliary\iscompatible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\add.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\addsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\div.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\imag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\mul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\out.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\real.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\swaprealimag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\functions\unpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\avx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\blank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\classes\sse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1\axpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1\copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1\dot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1\level1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1\scal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\acxpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\acxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\axpby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\ccopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\level1extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\racxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\raxpy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\rscal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level1extensions\sum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level2\gemv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level2\level2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level2\trmv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level2\trsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level3\gemm\kernelgemm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level3\gemm\packmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level3\gemm\subgemm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level3\gemm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\level3\level3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\intrinsics\intrinsics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\level1extensions\level1extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\level1extensions\prod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\level1extensions\sum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\level3extensions\gemm-strassen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\level3extensions\level3extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxblas\cxxblas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxdft\cxxdft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxdft\direction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxdft\multiple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\cxxdft\single.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\blas-extensions\level1\prod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\blas-extensions\level1\sum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\blas-extensions\level3\mm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\blas-extensions\blas-extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\dft\dft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\dft\matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\dft\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\gb\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\gb\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\ge\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\ge\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\hb\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\he\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\he\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\hp\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\sb\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\sp\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\sy\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\sy\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tb\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tb\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tp\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tp\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tr\determinant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\tr\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\lapack-extensions\lapack-extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\bcast\bcast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\recv\recv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\reduce\reduce.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\send\send.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\finalize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\mpi-flens.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\rank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\size.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\mpi\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\bicgstab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\cg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\cgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\pcg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\solver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\solver\tfqmr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\mkl\mkldss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\mkl\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\suitesparse\suitesparse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\suitesparse\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\superlu\create_compcol_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\superlu\create_dense_matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\superlu\gssv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\superlu\superlu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\superlu\sv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\sparse\sparse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\flens\flens.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\FLENS\playground\playground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\FLENS\doctool\flens.html" />
+  </ItemGroup>
+</Project>
