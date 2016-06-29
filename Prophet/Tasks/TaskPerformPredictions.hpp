@@ -82,21 +82,35 @@ public:
 	void Process(ModelPrediction* pending) {
 
 		Model* model = Model::Load(pending->ModelId());
+		std::cout<<"loaded model"<<std::endl;
 
+
+		std::cout<<"Model Name: "<<model->Name()<<std::endl;
 		//get the original dataset so we can get the min/max values to 
 		//perform feature scaling
 		//TODO: Optimization: On training, save these values on the database so we don't need yet another roundtrip
 		//to the db
 		Mtx* originalDataset = model->GetDataset();
 
+		std::cout<<"got original dataset"<<std::endl;
+
 		if (originalDataset != nullptr) {
+
+			std::cout<<"original dataset != nullptr"<<std::endl;
+
 			std::map<std::string, Mtx*> neuralnetworkParameters =
 				ModelParams::LoadParameters(model->ModelId());
+
+			std::cout<<"neuralnetworkparameters"<<std::cout;
+
 
 			//check if Theta1 and Theta2 are present
 			if (neuralnetworkParameters.size() > 0) {
 				int params = neuralnetworkParameters.count("theta1") +
 					neuralnetworkParameters.count("theta2");
+
+
+				std::cout<<"params found: "<<params<<std::endl;
 
 				if (params != 2) {
 					delete originalDataset;
@@ -113,6 +127,9 @@ public:
 					//let's create the dataset, varying only the time variable
 					Mtx M(pending->AmountOfPredictions(), model->InputVariables().size());
 
+
+					std::cout<<"prediction dataset created"<<std::endl;
+
 					//Performance: I don't think it matters if we build an entire column at a time.
 					//It doesn't really matter, the number of iterations would be the same... I guess.
 
@@ -121,6 +138,8 @@ public:
 					double step = (pending->ToValue() - pending->FromValue()) /
 						((double)pending->AmountOfPredictions());
 
+
+					std::cout<<"step: "<<step<<std::endl;
 
 					for (int i = 1; i <= pending->AmountOfPredictions(); i++) {
 						//we must now add the values to the row in the order of the model's input variables
@@ -141,6 +160,7 @@ public:
 						}
 					}
 
+					std::cout<<"will feature scale"<<std::endl;
 					M = FeatureScaling(M, originalDataset);
 
 
@@ -155,7 +175,9 @@ public:
 					result = Rescale(result, originalDataset);
 
 					std::stringstream ss;
-					
+
+					std::cout<<"saving result"<<std::endl;
+
 					//transform result in array
 					//it's gonna be always a vector matrix (i.e. one line multiple columns)
 					//so it doesn't really matter how many rows and cols we'll add to the 

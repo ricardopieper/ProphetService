@@ -11,7 +11,7 @@ class ModelParams {
 private:
 	Guid m_id;
 	Guid m_modelId;
-	double* m_data;
+	Mtx* m_mtx;
 	std::vector<int> m_dimensions;
 	int m_state;
 	std::string m_varname;
@@ -20,7 +20,6 @@ public:
 
 	Guid Id() { return m_id; }
 	Guid ModelId() { return m_modelId; }
-	double* Data() { return m_data; }
 
 	int Rows() { return m_dimensions[0]; }
 	int Cols() { return m_dimensions[1]; }
@@ -29,9 +28,6 @@ public:
 	std::string VarName() { return m_varname; }
 
 
-	void SetData(double* data) {
-		m_data = data;
-	}
 	void SetVarName(std::string name) {
 		m_varname = name;
 	}
@@ -129,9 +125,11 @@ public:
 		cass_future_wait(future);
 
 		CassError rc = cass_future_error_code(future);
+		//std::vector<ModelParams*>* params = new std::vector<ModelParams*>;
 		std::vector<ModelParams*> params;
-
 		if (rc != CASS_OK) {
+			std::cout<<"Cassandra error! "<<rc << std::endl;
+
 			throw std::string("Failed to execute query")
 				+ CassandraUtils::GetCassandraError(future);
 		}
@@ -154,8 +152,8 @@ public:
 				size_t size = 0;
 				const cass_byte_t* buffer;
 				cass_value_get_bytes(cass_row_get_column(row, 3), &buffer, &size);
-
-
+				std::cout<<"loaded from cassandra:"<<size<<std::endl;
+				std::cout<<"first: "<<(buffer[0])<<std::endl;
 				CassIterator* inputvalues_iterator =
 					cass_iterator_from_collection(cass_row_get_column(row, 4));
 
@@ -165,12 +163,27 @@ public:
 					cass_value_get_int32(cass_iterator_get_value(inputvalues_iterator), &value);
 					p->m_dimensions.push_back(value);
 				}
-				const double* d = reinterpret_cast<const double*>(buffer);
-				p->m_data = const_cast<double*>(d);
+
+    				const double* d = reinterpret_cast<const double*>(buffer);
+				std::cout<<"first d: "<<(d[0])<<std::endl; 
+
+				double* mtxdata = const_cast<double*>(d);
+
+				std::cout<<"first mtx: "<<(mtxdata[0])<<std::endl;
+
+				double* newbuf = new double[size/8];
+
+				std::memcpy(newbuf,mtxdata,size);
+
+                                p->m_mtx = new Mtx(FSView(p->Rows(), p->Cols(), newbuf, p->Rows()));
+
+
+				std::cout<<*(p->m_mtx)<<std::endl;
+
 
 				cass_iterator_free(inputvalues_iterator);
-
 				params.push_back(p);
+				//params->push_back(p);
 			}
 
 			cass_result_free(result);
@@ -179,6 +192,9 @@ public:
 
 		cass_future_free(future);
 		cass_statement_free(statement);
+
+		std::cout<<"Finished loading params."<<std::endl;
+
 		return params;
 
 	}
@@ -186,15 +202,34 @@ public:
 	static std::map<std::string, Mtx*> LoadParameters(Guid modelId)
 	{
 
-		auto params = Load(modelId);
+		std::cout<< "Loading params..."<<std::endl;
+
+		std::vector<ModelParams*> params = Load(modelId);
+
+		std::cout<<"params loaded "<<std::endl;
+
+		std::cout<<"num theta:"<<params.size()<<std::endl;
 
 		std::map<std::string, Mtx*> mapParams;
 
-		for (auto p : params) {
+		std::cout<<"instance of map created"<<std::endl;
 
-			Mtx* mtx = new Mtx(FSView(p->Rows(), p->Cols(), p->Data(), p->Rows()));
-			mapParams.emplace(p->VarName(), mtx);
-			
+
+		for (ModelParams* parm : params) {
+
+			std::cout<<(parm)<<std::endl;
+			std::cout<<"Dereferencing last address"<<std::endl;
+
+			ModelParams p  = *parm;
+			std::cout<<"Dereferenced!"<<std::endl;
+
+			std::cout<<p.VarName()<<std::endl;
+
+			std::cout<<"Rows: "<<p.Rows()<<std::endl;
+			std::cout<<"Cols: "<<p.Cols()<<std::endl;
+
+			mapParams.emplace(p.VarName(), p.m_mtx);
+
 		}
 
 		return mapParams;
@@ -202,7 +237,6 @@ public:
 	}
 
 	~ModelParams() {
-		delete[] m_data;
 	}
 
 };

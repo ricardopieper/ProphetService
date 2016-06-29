@@ -5,6 +5,7 @@ class Task
 {
 public:
 	virtual void Run() = 0;
+	virtual ~Task(){};
 };
 #endif
 

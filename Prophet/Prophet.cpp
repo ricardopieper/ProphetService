@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 	Task *uploads = new TaskProcessUpload()
 		 , *trainModel = new TaskTrainModel()
 		 , *performPredictions = new TaskPerformPredictions()
-		//, *test = new TaskTestModel()
+		, *test = new TaskTestModel()
 		;
 
 	std::vector<TaskRunner*> tasks = {
@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 		delete task;
 	}
 
-    delete uploads;
+	delete uploads;
 	delete trainModel;
 	delete performPredictions;
 
