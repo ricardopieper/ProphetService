@@ -27,8 +27,10 @@ private:
 		Mtx* ds = unprocessed->GetDataset();
 
 		if (ds != nullptr) {
-			//feature scaling
+			//delete all first
+			ModelParams::DeleteAll(*unprocessed);
 
+			//feature scaling
 			Mtx dataset = *ds;
 
 			double scaleMin = 0;
@@ -91,7 +93,7 @@ private:
 			std::chrono::high_resolution_clock::time_point end(
 				std::chrono::high_resolution_clock::now());
 
-			ModelParams::DeleteAll(*unprocessed);
+			
 			for (auto p : trainedParams) {
 				std::cout<<"Saving param "<<p.Name<<std::endl;
 				ModelParams::Save(*unprocessed, p.Name, p.Params);
