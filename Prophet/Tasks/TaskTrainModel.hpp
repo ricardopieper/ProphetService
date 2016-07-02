@@ -22,7 +22,9 @@ private:
 		//Mtx::IndexVariable i, j;
 		Underscore<Mtx::IndexType> _;
 
-		//Mtx dataset = *(new Mtx());
+		
+		std::chrono::high_resolution_clock::time_point start(
+			std::chrono::high_resolution_clock::now());
 
 		Mtx* ds = unprocessed->GetDataset();
 
@@ -30,6 +32,7 @@ private:
 			//delete all first
 			ModelParams::DeleteAll(*unprocessed);
 
+		
 			//feature scaling
 			Mtx dataset = *ds;
 
@@ -79,8 +82,6 @@ private:
 
 			NeuralNetwork nn((int)sqrt((double)input.numCols()) * 2, 0.1);
 
-			std::chrono::high_resolution_clock::time_point start(
-				std::chrono::high_resolution_clock::now());
 
 
 			std::cout << "Performing Training" <<std::endl;
@@ -90,18 +91,19 @@ private:
 
 			std::cout<<"Performing Training - Complete" <<std::endl;
 
-			std::chrono::high_resolution_clock::time_point end(
-				std::chrono::high_resolution_clock::now());
-
+		
 			
 			for (auto p : trainedParams) {
 				std::cout<<"Saving param "<<p.Name<<std::endl;
 				ModelParams::Save(*unprocessed, p.Name, p.Params);
 			}
+			
+			std::chrono::high_resolution_clock::time_point end(
+				std::chrono::high_resolution_clock::now());
 
 			auto microseconds = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
-			std::cout<<"Setting processed"<<std::endl;
+		
 			unprocessed->SetProcessed(microseconds.count());
 			std::cout<<"Training finished"<<std::endl;
 

@@ -35,6 +35,9 @@ private:
 		Mtx* mtx = nullptr;
 
 		try {
+			std::chrono::high_resolution_clock::time_point start(
+				std::chrono::high_resolution_clock::now());
+
 			std::cout << "Processing Upload" << std::endl;
 
 			std::string file = UploadChunks::LoadFile(*upload);
@@ -90,15 +93,22 @@ private:
 
 			std::cout << "Loaded matrix from csv" << std::endl;
 
-			ModelDatasets model;
+			ModelDatasets modelDatasets;
 
 			std::cout << "Saving model..." << std::endl;
 
-			model.Save(m, modelColumns, mtx);
+			modelDatasets.Save(m, modelColumns, mtx);
 
 			upload->SetProcessed(true);
 			upload->SetResult("File loaded successfully");
 			upload->Save();
+
+			std::chrono::high_resolution_clock::time_point end(
+				std::chrono::high_resolution_clock::now());
+
+			auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
+			m->SetIntColumn("millisecondslastprediction", milliseconds.count());
 
 			TaskBasicDataProcess::Averages(m);
 

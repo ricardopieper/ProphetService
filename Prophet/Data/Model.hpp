@@ -165,13 +165,13 @@ public:
 		return m_state;
 	}
 
-	void SetProcessed(int millisecondsTraining) {
+	void SetIntColumn(std::string col, int value) {
 		DatabaseSession session;
 
 		CassStatement* statement = cass_statement_new(
-			"update prophet.models set state = 2, millisecondstraining = ? where model_id = ?", 2);
+			("update prophet.models set state = 2, "+col+" = ? where model_id = ?").c_str(), 2);
 
-		cass_statement_bind_int32(statement, 0, millisecondsTraining);
+		cass_statement_bind_int32(statement, 0, value);
 
 		cass_statement_bind_uuid(statement, 1, m_modelId);
 
@@ -190,6 +190,11 @@ public:
 		}
 		cass_statement_free(statement);
 		cass_future_free(future);
+	}
+
+
+	void SetProcessed(int millisecondsTraining) {
+		SetIntColumn("millisecondstraining", millisecondsTraining);
 	}
 
 	static std::vector<Model*> LoadAll() {

@@ -72,6 +72,8 @@ public:
 
 
 	void Process(ModelPrediction* pending) {
+		std::chrono::high_resolution_clock::time_point start(
+			std::chrono::high_resolution_clock::now());
 
 		Model* model = Model::Load(pending->ModelId());
 		
@@ -167,7 +169,12 @@ public:
 				}
 
 				pending->SaveResult(ss.str());
+				std::chrono::high_resolution_clock::time_point end(
+					std::chrono::high_resolution_clock::now());
+				
+				auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
+				model->SetIntColumn("millisecondslastprediction", milliseconds.count());
 
 				for (auto pair : neuralnetworkParameters) { //delete the allocated matrices
 					delete pair.second;
