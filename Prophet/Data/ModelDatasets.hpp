@@ -29,7 +29,7 @@ public:
 		
 		std::string insert = "insert into prophet.modeldatasets (model_id, row_id, ";
 		std::string fields = "";
-		std::string params = "?, toTimestamp(now()), ";
+		std::string params = "?, uuid(), ";
 		{
 			int i = 0;
 			int max = headers.size();
