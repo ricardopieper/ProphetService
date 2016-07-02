@@ -87,6 +87,7 @@ public:
 		cass_bool_t hasMorePages = cass_true;
 		while (hasMorePages)
 		{
+			std::cout << "fetching dataset..." << std::endl;
 			CassFuture * future = cass_session_execute(session.Session(), statement);
 			cass_future_wait(future);
 
