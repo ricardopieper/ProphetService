@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 
+
 class ModelParams {
 private:
 	Guid m_id;
@@ -24,6 +25,10 @@ public:
 	int Rows() { return m_dimensions[0]; }
 	int Cols() { return m_dimensions[1]; }
 
+	Mtx* GetMtx() {
+		return m_mtx;
+	}
+
 	std::vector<int> Dimension() { return m_dimensions; }
 	std::string VarName() { return m_varname; }
 
@@ -38,6 +43,9 @@ public:
 
 	ModelParams() {
 	}
+
+
+	
 
 	static void Save(Model& model, std::string name, Mtx& data) {
 
@@ -110,6 +118,33 @@ public:
 
 	}
 
+	static void DeleteAll(Model& model, Guid ) {
+
+
+		DatabaseSession session;
+
+		CassStatement* statement = cass_statement_new(
+			"delete from prophet.modelparams where model_id = ? and modelparams_id = ?", 1);
+
+		//delete from prophet.modelparams where model_id = 5546d453-8947-4e09-9a1a-ec2f558d6e33 and varname = 'theta3';
+		cass_statement_bind_uuid(statement, 0, model.ModelId());
+
+		CassFuture* future = cass_session_execute(session.Session(), statement);
+		cass_future_wait(future);
+		cass_statement_free(statement);
+
+		CassError rc = cass_future_error_code(future);
+
+		if (rc != CASS_OK) {
+			cass_future_free(future);
+
+			throw std::string("Failed to execute query: ")
+				+ CassandraUtils::GetCassandraError(future);
+		}
+		cass_future_free(future);
+
+	}
+
 
 	static std::vector<ModelParams*> Load(Guid modelId) {
 
@@ -164,7 +199,8 @@ public:
 					p->m_dimensions.push_back(value);
 				}
 
-    				const double* d = reinterpret_cast<const double*>(buffer);
+				const double* d = reinterpret_cast<const double*>(buffer);
+				
 				std::cout<<"first d: "<<(d[0])<<std::endl; 
 
 				double* mtxdata = const_cast<double*>(d);
@@ -175,12 +211,10 @@ public:
 
 				std::memcpy(newbuf,mtxdata,size);
 
-                                p->m_mtx = new Mtx(FSView(p->Rows(), p->Cols(), newbuf, p->Rows()));
-
-
+				p->m_mtx = new Mtx(FSView(p->Rows(), p->Cols(), newbuf, p->Rows()));
+				
 				std::cout<<*(p->m_mtx)<<std::endl;
-
-
+				
 				cass_iterator_free(inputvalues_iterator);
 				params.push_back(p);
 				//params->push_back(p);
@@ -199,7 +233,7 @@ public:
 
 	}
 
-	static std::map<std::string, Mtx*> LoadParameters(Guid modelId)
+	static std::map<std::string, ModelParams*> LoadParameters(Guid modelId)
 	{
 
 		std::cout<< "Loading params..."<<std::endl;
@@ -210,7 +244,7 @@ public:
 
 		std::cout<<"num theta:"<<params.size()<<std::endl;
 
-		std::map<std::string, Mtx*> mapParams;
+		std::map<std::string, ModelParams*> mapParams;
 
 		std::cout<<"instance of map created"<<std::endl;
 
@@ -228,7 +262,7 @@ public:
 			std::cout<<"Rows: "<<p.Rows()<<std::endl;
 			std::cout<<"Cols: "<<p.Cols()<<std::endl;
 
-			mapParams.emplace(p.VarName(), p.m_mtx);
+			mapParams.emplace(p.VarName(), parm);
 
 		}
 

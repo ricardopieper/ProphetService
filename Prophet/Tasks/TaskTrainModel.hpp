@@ -33,11 +33,14 @@ private:
 
 			double scaleMin = 0;
 			double scaleMax = 1;
+			
+			std::vector<std::string> cols = unprocessed->InputVariables();
+			cols.push_back(unprocessed->OutputVariable());
 
 			for (int column = 1; column <= dataset.numCols(); column++) {
 
 				Mtx mColuna = dataset(_, _(column, column));
-
+		
 				double valMin = Functions::Min(mColuna);
 				double valMax = Functions::Max(mColuna);
 
@@ -48,6 +51,19 @@ private:
 
 				}
 
+				Mtx mtxMin(1, 1);
+				mtxMin(1, 1) = valMin;
+
+
+				Mtx mtxMax(1, 1);
+				mtxMax(1, 1) = valMax;
+
+				std::string varmin = cols[column-1] + "_min";
+				std::string varmax = cols[column - 1] + "_max";
+
+				ModelParams::Save(*unprocessed, varmin, mtxMin);
+				ModelParams::Save(*unprocessed, varmax, mtxMax);
+				
 			}
 
 			Mtx input = dataset(_, _(1, dataset.numCols() - 1));

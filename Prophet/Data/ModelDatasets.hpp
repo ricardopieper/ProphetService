@@ -22,7 +22,7 @@ public:
 		DatabaseSession session;
 
 	
-		int batchSize = 100;
+		int batchSize = 200;
 		int remainingRows = mtx->numRows();
 
 

@@ -1,1 +1,0 @@
-/root/git/ProphetService/Prophet/CMakeFiles/ProphetService.dir

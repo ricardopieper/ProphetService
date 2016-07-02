@@ -90,8 +90,9 @@ private:
 			upload->SetResult("File loaded successfully");
 			upload->Save();
 
-			TaskBasicDataProcess::Run(m);
-
+			TaskBasicDataProcess::Averages(m);
+			
+			delete mtx;
 		}
 		catch (std::string err) {
 			upload->SetProcessed(true);
