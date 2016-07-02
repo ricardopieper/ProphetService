@@ -44,7 +44,7 @@ public:
 			}
 		}
 		insert += fields + ") values (" + params + ")";
-		CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
+		/*CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
 
 		cass_future_wait(future_session);
 		CassError rc = cass_future_error_code(future_session);
@@ -56,9 +56,10 @@ public:
 			throw err;
 		}
 		else {
-
+		*/
 			while (remainingRows > 0) {
-
+				CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
+				cass_future_wait(future_session);
 				const CassPrepared* prepared = cass_future_get_prepared(future_session);
 
 				CassBatch* batch = cass_batch_new(CASS_BATCH_TYPE_LOGGED);
@@ -68,7 +69,9 @@ public:
 
 				int rowsToInsert = std::min(batchSize, remainingRows);
 				std::cout << "Inserting " << rowsToInsert << " rows" << std::endl;
+				
 				for (int row = 0; row < rowsToInsert; row++) {
+				
 					CassStatement* statement = cass_prepared_bind(prepared);
 
 					cass_statement_bind_uuid(statement, 0, model->ModelId());
@@ -88,7 +91,7 @@ public:
 				CassFuture* future = cass_session_execute_batch(session.Session(), batch);
 				cass_future_wait(future);
 
-				rc = cass_future_error_code(future);
+				CassError rc = cass_future_error_code(future);
 				if (rc != CASS_OK) {
 					cass_prepared_free(prepared);
 					cass_batch_free(batch);
@@ -105,7 +108,7 @@ public:
 				
 				std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
 			}
-		}
+		//}
 		//cass_future_free(future_session);
 	}
 
