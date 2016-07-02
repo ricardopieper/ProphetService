@@ -28,16 +28,28 @@ private:
 
 	void Process(Upload* upload) {
 
+		std::cout<< "Processing Upload"<<std::endl;
+
 		std::string file = upload->File();
+
+		std::cout<<"Loaded file: "<<file.size()<<std::endl;
 
 		Model* m = Model::Load(upload->ModelId());
 
+		std::cout<<"Loaded Model: "<<m->Name()<<std::endl;
+
 		CSVReader csv(file);
+
+		std::cout<<"Loaded CSV Reader"<<std::endl;
 
 		auto fileHeader = csv.GetHeader();
 
+		std::cout<<"Loaded CSV Header: "<<fileHeader.size()<<std::endl;
+
 		auto modelColumns = m->InputVariables();
 
+
+		std::cout<<"Model columns: "<<modelColumns.size()<<std::endl;
 		//consider the output variable also
 		modelColumns.push_back(m->OutputVariable());
 
@@ -62,9 +74,15 @@ private:
 
 		try {
 
+
 			auto mtx = csv.GetMatrix();
 
+
+			std::cout<<"Loaded matrix from csv"<<std::endl;
+
 			ModelDatasets model;
+
+			std::cout<<"Saving model..."<<std::endl;
 
 			model.Save(m, modelColumns, mtx);
 

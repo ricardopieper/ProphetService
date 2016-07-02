@@ -31,10 +31,9 @@ class TaskBasicDataProcess {
 	}
 
 public:
-	static void Run(Model* model) {
+	static void Run(Model* model, Mtx* data) {
 		Underscore<Mtx::IndexType>  _;
 		//the matrix's columns are in the order of model->inputVars() + outputVar
-		Mtx* data = model->GetDataset();
 
 		//ok we have all columns
 		std::vector<std::string> cols = model->InputVariables();

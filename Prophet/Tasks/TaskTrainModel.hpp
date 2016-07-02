@@ -53,14 +53,6 @@ private:
 			Mtx input = dataset(_, _(1, dataset.numCols() - 1));
 			Mtx output = dataset(_, _(dataset.numCols(), dataset.numCols()));
 
-
-			ofstream o("dataset.txt");
-			o << "input" << std::endl;
-			o << input;
-			o << "output" << std::endl;
-			o << output;
-			o.close();
-
 			//number of hidden nodes = sqrt(cols(input)) * 2;
 
 			NeuralNetwork nn((int)sqrt((double)input.numCols()) * 2, 0.1);
@@ -68,24 +60,35 @@ private:
 			std::chrono::high_resolution_clock::time_point start(
 				std::chrono::high_resolution_clock::now());
 
+
+			std::cout << "Performing Training" <<std::endl;
+
 			auto trainedParams = nn.Train(NeuralNetwork::ErrorType::MeanSquaredError,
 				&input, &output);
+
+			std::cout<<"Performing Training - Complete" <<std::endl;
 
 			std::chrono::high_resolution_clock::time_point end(
 				std::chrono::high_resolution_clock::now());
 
 			ModelParams::DeleteAll(*unprocessed);
 			for (auto p : trainedParams) {
+				std::cout<<"Saving param "<<p.Name<<std::endl;
 				ModelParams::Save(*unprocessed, p.Name, p.Params);
 			}
 
 			auto microseconds = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
+			std::cout<<"Setting processed"<<std::endl;
 			unprocessed->SetProcessed(microseconds.count());
+			std::cout<<"Training finished"<<std::endl;
 
 			delete ds;
+		} else{
+			std::cout<<"Dataset is null"<<std::endl;
 		}
 	}
-
+	bool logTrainingModel = true;
 public:
 	void Run() {
 		try {
@@ -93,13 +96,19 @@ public:
 
 			if (unprocessed != nullptr) {
 
-				//std::cout << "Training model" << std::endl;
-
+				std::cout << "Training model" << std::endl;
+				logTrainingModel = true;
 				Process(unprocessed);
 				delete unprocessed;
 			}
 			else {
-				//std::cout << "No models to train" << std::endl;
+
+				if (logTrainingModel)
+				{
+					std::cout << "No models to train" << std::endl;
+					logTrainingModel = false;
+				}
+
 			}
 		}
 		catch (std::string& e) {
