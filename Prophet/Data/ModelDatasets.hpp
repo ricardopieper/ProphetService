@@ -22,40 +22,42 @@ public:
 		DatabaseSession session;
 
 
-		int batchSize = 600;
+		int batchSize = 200;
 		int remainingRows = mtx->numRows();
-
-
-		while (remainingRows > 0) {
-
-			std::string insert = "insert into prophet.modeldatasets (model_id, row_id, ";
-			std::string fields = "";
-			std::string params = "?, toTimestamp(now()), ";
-			{
-				int i = 0;
-				int max = headers.size();
-				for (auto str : headers) {
-					fields += str;
-					params += "?";
-					if (i < max - 1) {
-						fields += ", ";
-						params += ", ";
-					}
-					i++;
+		std::cout << "rows: " << remainingRows << std::endl;
+		std::cout << "batch: " << batchSize << std::endl;
+		
+		std::string insert = "insert into prophet.modeldatasets (model_id, row_id, ";
+		std::string fields = "";
+		std::string params = "?, toTimestamp(now()), ";
+		{
+			int i = 0;
+			int max = headers.size();
+			for (auto str : headers) {
+				fields += str;
+				params += "?";
+				if (i < max - 1) {
+					fields += ", ";
+					params += ", ";
 				}
+				i++;
 			}
-			insert += fields + ") values (" + params + ")";
+		}
+		insert += fields + ") values (" + params + ")";
+		CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
 
-			CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
+		cass_future_wait(future_session);
+		CassError rc = cass_future_error_code(future_session);
+		if (rc != CASS_OK) {
+			auto err =  std::string("Failed to execute query: ")
+				+ CassandraUtils::GetCassandraError(future_session);
+			std::cout << err << std::endl;
+			cass_future_free(future_session);
+			throw err;
+		}
+		else {
 
-			cass_future_wait(future_session);
-
-			CassError rc = cass_future_error_code(future_session);
-			if (rc != CASS_OK) {
-				throw std::string("Failed to execute query: ")
-					+ CassandraUtils::GetCassandraError(future_session);
-			}
-			else {
+			while (remainingRows > 0) {
 
 				const CassPrepared* prepared = cass_future_get_prepared(future_session);
 
@@ -65,7 +67,7 @@ public:
 				int cols = mtx->numCols();
 
 				int rowsToInsert = std::min(batchSize, remainingRows);
-				if (remainingRows % (batchSize * 100) == 0) {
+				if (remainingRows % (batchSize * 10) == 0) {
 					std::cout << "Inserting " << rowsToInsert << " rows" << std::endl;
 				}
 				for (int row = 0; row < rowsToInsert; row++) {
@@ -90,7 +92,7 @@ public:
 
 				rc = cass_future_error_code(future);
 				if (rc != CASS_OK) {
-
+					cass_prepared_free(prepared);
 					cass_batch_free(batch);
 					std::string err = std::string("Failed to execute query: ")
 						+ CassandraUtils::GetCassandraError(future);
@@ -101,19 +103,15 @@ public:
 				cass_future_free(future);
 				cass_batch_free(batch);
 				cass_prepared_free(prepared);
-
-				bool log = remainingRows % (batchSize * 100) == 0;
-
 				remainingRows -= rowsToInsert;
+				bool log = remainingRows % (batchSize * 10) == 0;
 
 				if (log) {
 					std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
 				}
 			}
-
-			cass_future_free(future_session);
 		}
-
+		cass_future_free(future_session);
 	}
 
 
