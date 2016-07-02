@@ -67,9 +67,7 @@ public:
 				int cols = mtx->numCols();
 
 				int rowsToInsert = std::min(batchSize, remainingRows);
-				if (remainingRows % (batchSize * 10) == 0) {
-					std::cout << "Inserting " << rowsToInsert << " rows" << std::endl;
-				}
+				std::cout << "Inserting " << rowsToInsert << " rows" << std::endl;
 				for (int row = 0; row < rowsToInsert; row++) {
 					CassStatement* statement = cass_prepared_bind(prepared);
 
@@ -104,11 +102,8 @@ public:
 				cass_batch_free(batch);
 				cass_prepared_free(prepared);
 				remainingRows -= rowsToInsert;
-				bool log = remainingRows % (batchSize * 10) == 0;
-
-				if (log) {
-					std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
-				}
+				
+				std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
 			}
 		}
 		cass_future_free(future_session);
