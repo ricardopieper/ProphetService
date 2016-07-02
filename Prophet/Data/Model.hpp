@@ -79,67 +79,80 @@ public:
 		CassStatement* statement = cass_statement_new(insert.c_str(), 1);
 		cass_statement_bind_uuid(statement, 0, m_modelId);
 
-		CassFuture * future = cass_session_execute(session.Session(), statement);
-		cass_future_wait(future);
+		cass_statement_set_paging_size(statement, 100000);
 
-		CassError rc = cass_future_error_code(future);
+		std::vector<std::vector<double>> mtxBuf;
+		size_t columns = m_inputVars.size() + 1;
 
-		if (rc != CASS_OK) {
-			throw std::string("Failed to execute query: ")
-				+ CassandraUtils::GetCassandraError(future);
-		}
-		else
+		cass_bool_t hasMorePages = cass_true;
+		while (hasMorePages)
 		{
-			const CassResult* result = cass_future_get_result(future);
-			CassIterator* iterator = cass_iterator_from_result(result);
+			CassFuture * future = cass_session_execute(session.Session(), statement);
+			cass_future_wait(future);
 
-			std::vector<std::vector<double>> mtxBuf;
+			CassError rc = cass_future_error_code(future);
 
-			size_t columns = m_inputVars.size() + 1;
+			if (rc != CASS_OK) {
+				std::string str = std::string("Failed to execute query: ")
+					+ CassandraUtils::GetCassandraError(future);
 
-			while (cass_iterator_next(iterator)) {
-
-				const CassRow* row = cass_iterator_get_row(iterator);
-
-				std::vector<double> line;
-
-				for (size_t i = 0; i < columns; i++) {
-
-					double* d = new double;
-
-					cass_value_get_double(cass_row_get_column(row, i), d);
-
-					line.push_back(*d);
-
-				}
-				mtxBuf.push_back(line);
-			}
-
-			cass_result_free(result);
-			cass_iterator_free(iterator);
-
-			if (mtxBuf.size()) {
-
-				Mtx* m = new Mtx(mtxBuf.size(), columns);
-
-				for (size_t i = 1; i <= mtxBuf.size(); i++) {
-
-					auto line = mtxBuf[i - 1];
-
-					for (size_t j = 1; j <= columns; j++) {
-
-						double v = line[j - 1];
-
-						(*m)(i, j) = v;
-					}
-				}
 				cass_future_free(future);
-				cass_statement_free(statement);
-				return m;
+				throw str;
 			}
-			else return nullptr;
+			else
+			{
+				const CassResult* result = cass_future_get_result(future);
+				CassIterator* iterator = cass_iterator_from_result(result);
+
+				while (cass_iterator_next(iterator)) {
+
+					const CassRow* row = cass_iterator_get_row(iterator);
+
+					std::vector<double> line;
+
+					for (size_t i = 0; i < columns; i++) {
+
+						double* d = new double;
+
+						cass_value_get_double(cass_row_get_column(row, i), d);
+
+						line.push_back(*d);
+
+					}
+					mtxBuf.push_back(line);
+				}
+
+				hasMorePages = cass_result_has_more_pages(result);
+				if (hasMorePages) {
+					cass_statement_set_paging_state(statement, result);
+				}
+				cass_result_free(result);
+				cass_iterator_free(iterator);
+
+			}
+			cass_future_free(future);
 		}
 
+		if (mtxBuf.size()) {
+
+			Mtx* m = new Mtx(mtxBuf.size(), columns);
+
+			for (size_t i = 1; i <= mtxBuf.size(); i++) {
+
+				auto line = mtxBuf[i - 1];
+
+				for (size_t j = 1; j <= columns; j++) {
+
+					double v = line[j - 1];
+
+					(*m)(i, j) = v;
+				}
+			}
+
+			cass_statement_free(statement);
+			return m;
+		}
+		else return nullptr;
 	}
 
 
@@ -169,7 +182,7 @@ public:
 		DatabaseSession session;
 
 		CassStatement* statement = cass_statement_new(
-			("update prophet.models set state = 2, "+col+" = ? where model_id = ?").c_str(), 2);
+			("update prophet.models set state = 2, " + col + " = ? where model_id = ?").c_str(), 2);
 
 		cass_statement_bind_int32(statement, 0, value);
 
