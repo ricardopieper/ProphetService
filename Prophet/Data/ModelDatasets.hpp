@@ -21,12 +21,12 @@ public:
 
 		DatabaseSession session;
 
-	
-		int batchSize = 200;
+
+		int batchSize = 600;
 		int remainingRows = mtx->numRows();
 
 
-		while (remainingRows > 0){
+		while (remainingRows > 0) {
 
 			std::string insert = "insert into prophet.modeldatasets (model_id, row_id, ";
 			std::string fields = "";
@@ -45,19 +45,19 @@ public:
 				}
 			}
 			insert += fields + ") values (" + params + ")";
-	
-			CassFuture* future = cass_session_prepare(session.Session(), insert.c_str());
-	
-			cass_future_wait(future);
 
-			CassError rc = cass_future_error_code(future);	
+			CassFuture* future_session = cass_session_prepare(session.Session(), insert.c_str());
+
+			cass_future_wait(future_session);
+
+			CassError rc = cass_future_error_code(future_session);
 			if (rc != CASS_OK) {
 				throw std::string("Failed to execute query: ")
-				+ CassandraUtils::GetCassandraError(future);
+					+ CassandraUtils::GetCassandraError(future_session);
 			}
 			else {
 
-				const CassPrepared* prepared = cass_future_get_prepared(future);
+				const CassPrepared* prepared = cass_future_get_prepared(future_session);
 
 				CassBatch* batch = cass_batch_new(CASS_BATCH_TYPE_LOGGED);
 
@@ -65,7 +65,9 @@ public:
 				int cols = mtx->numCols();
 
 				int rowsToInsert = std::min(batchSize, remainingRows);
-				std::cout<<"Inserting "<<rowsToInsert<<" rows"<<std::endl;
+				if (remainingRows % (batchSize * 100) == 0) {
+					std::cout << "Inserting " << rowsToInsert << " rows" << std::endl;
+				}
 				for (int row = 0; row < rowsToInsert; row++) {
 					CassStatement* statement = cass_prepared_bind(prepared);
 
@@ -83,8 +85,7 @@ public:
 
 
 				}
-
-				future = cass_session_execute_batch(session.Session(), batch);
+				CassFuture* future = cass_session_execute_batch(session.Session(), batch);
 				cass_future_wait(future);
 
 				rc = cass_future_error_code(future);
@@ -99,9 +100,18 @@ public:
 				}
 				cass_future_free(future);
 				cass_batch_free(batch);
+				cass_prepared_free(prepared);
+
+				bool log = remainingRows % (batchSize * 100) == 0;
+
 				remainingRows -= rowsToInsert;
-				std::cout<<"Inserted "<<rowsToInsert<<"/"<<(mtx->numRows())<< " ("<<remainingRows << " remaining)"<<std::endl;
+
+				if (log) {
+					std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
+				}
 			}
+
+			cass_future_free(future_session);
 		}
 
 	}
