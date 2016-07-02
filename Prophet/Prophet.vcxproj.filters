@@ -33,6 +33,9 @@
     <ClCompile Include="FileReaders\FlensCsv.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Data\UploadChunks.hpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data\Model.hpp">

@@ -71,6 +71,7 @@ public:
 	}*/
 
 	static void Averages(Model* model) {
+
 		Underscore<Mtx::IndexType>  _;
 		//the matrix's columns are in the order of model->inputVars() + outputVar
 		Mtx* data = model->GetDataset();

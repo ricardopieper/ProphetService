@@ -114,10 +114,13 @@ public:
 		CassError rc = cass_future_error_code(future);
 
 		if (rc != CASS_OK) {
+			
+			std::string err = std::string("Failed to execute query: ")
+				+ CassandraUtils::GetCassandraError(future);
+
 			cass_future_free(future);
 
-			throw std::string("Failed to execute query: ")
-				+ CassandraUtils::GetCassandraError(future);
+			throw err;
 		}
 		cass_future_free(future);
 

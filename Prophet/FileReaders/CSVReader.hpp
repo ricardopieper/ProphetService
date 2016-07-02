@@ -4,6 +4,7 @@
 #define _FLENSCSV_HPP_
 #include "../ML/FlensDefs.hpp"
 #include <string>
+#include <map>
 class CSVReader {
 private:
 	std::string original;
@@ -14,6 +15,6 @@ private:
 public:
 	CSVReader(std::string file);
 	std::vector<std::string> GetHeader();
-	Mtx* GetMatrix();
+	Mtx* GetMatrix(std::map<std::string, int> indexDefinitions);
 };
 #endif

@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data\DatabaseSession.cpp" />
+    <ClCompile Include="Data\UploadChunks.hpp" />
     <ClCompile Include="FileReaders\CSVReader.cpp" />
     <ClCompile Include="FileReaders\FlensCsv.cpp" />
     <ClCompile Include="ML\fmincg.cpp" />

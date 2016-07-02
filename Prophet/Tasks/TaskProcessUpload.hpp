@@ -4,6 +4,7 @@
 #include "../Data/Model.hpp"
 #include "../Data/ModelDatasets.hpp"
 #include "../Data/BasicModelView.hpp"
+#include "../Data/UploadChunks.hpp"
 #include "TaskBasicDataProcess.hpp"
 
 #include <thread>
@@ -11,6 +12,7 @@
 #include <chrono>
 #include <algorithm>
 #include <vector>
+#include <map>
 #include "../TaskRunner/Task.hpp"
 
 class TaskProcessUpload : public Task {
@@ -28,61 +30,69 @@ private:
 
 	void Process(Upload* upload) {
 
-		std::cout<< "Processing Upload"<<std::endl;
-
-		std::string file = upload->File();
-
-		std::cout<<"Loaded file: "<<file.size()<<std::endl;
-
-		Model* m = Model::Load(upload->ModelId());
-
-		std::cout<<"Loaded Model: "<<m->Name()<<std::endl;
-
-		CSVReader csv(file);
-
-		std::cout<<"Loaded CSV Reader"<<std::endl;
-
-		auto fileHeader = csv.GetHeader();
-
-		std::cout<<"Loaded CSV Header: "<<fileHeader.size()<<std::endl;
-
-		auto modelColumns = m->InputVariables();
-
-
-		std::cout<<"Model columns: "<<modelColumns.size()<<std::endl;
-		//consider the output variable also
-		modelColumns.push_back(m->OutputVariable());
-
-		//ok, does the file have all the columns of the model?
-		//for each col in model, check if exists on file. If doesnt, then exception.
-
-		for (std::string modelCol : modelColumns)
-		{
-
-			if (!Contains(fileHeader, modelCol))
-			{
-				std::string err = "Error while processing: make sure the columns in your CSV"
-					" file match the variables that you chose in the model.";
-
-				upload->SetProcessed(true);
-				upload->SetResult(err);
-				upload->Save();
-
-				throw err;
-			}
-		}
+		CSVReader* csv = nullptr;
+		Model* m = nullptr;
+		Mtx* mtx = nullptr;
 
 		try {
+			std::cout << "Processing Upload" << std::endl;
+
+			std::string file = UploadChunks::LoadFile(*upload);
+
+			std::cout << "Loaded file: " << file.size() << std::endl;
+
+			m = Model::Load(upload->ModelId());
+
+			std::cout << "Loaded Model: " << m->Name() << std::endl;
+
+			csv = new CSVReader(file);
+
+			std::cout << "Loaded CSV Reader" << std::endl;
+
+			auto fileHeader = csv->GetHeader();
+
+			std::cout << "Loaded CSV Header: " << fileHeader.size() << std::endl;
+
+			auto modelColumns = m->InputVariables();
+
+			//consider the output variable also
+			modelColumns.push_back(m->OutputVariable());
+
+			//ok, does the file have all the columns of the model?
+			//for each col in model, check if exists on file. If doesnt, then exception.
+
+			std::map<std::string, int> indexDefs;
+
+			//FLENS is 1-indexed by default
+			int index = 1;
+			for (std::string modelCol : modelColumns)
+			{
+
+				if (!Contains(fileHeader, modelCol))
+				{
+					std::string err = "Error while processing: make sure the columns in your CSV"
+						" file match the variables that you chose in the model.";
+
+					upload->SetProcessed(true);
+					upload->SetResult(err);
+					upload->Save();
+
+					throw err;
+				}
+
+				indexDefs.emplace(modelCol, index);
+				index++;
+			}
 
 
-			auto mtx = csv.GetMatrix();
+			mtx = csv->GetMatrix(indexDefs);
 
 
-			std::cout<<"Loaded matrix from csv"<<std::endl;
+			std::cout << "Loaded matrix from csv" << std::endl;
 
 			ModelDatasets model;
 
-			std::cout<<"Saving model..."<<std::endl;
+			std::cout << "Saving model..." << std::endl;
 
 			model.Save(m, modelColumns, mtx);
 
@@ -91,8 +101,7 @@ private:
 			upload->Save();
 
 			TaskBasicDataProcess::Averages(m);
-			
-			delete mtx;
+
 		}
 		catch (std::string err) {
 			upload->SetProcessed(true);
@@ -100,7 +109,9 @@ private:
 			upload->Save();
 		}
 
+		delete mtx;
 		delete m;
+		delete csv;
 	}
 
 

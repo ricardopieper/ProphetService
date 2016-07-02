@@ -1,6 +1,7 @@
 
 #include "CSVReader.hpp"
 #include <vector>
+#include <map>
 using namespace std;
 
 
@@ -69,7 +70,8 @@ std::vector<std::string> CSVReader::GetHeader() {
 	return header;
 }
 
-Mtx* CSVReader::GetMatrix()
+//indexDefinitions: how the file should be loaded. 
+Mtx* CSVReader::GetMatrix(std::map<std::string, int> indexDefinitions)
 {
 
 	bool headerSkipped = false;
@@ -97,8 +99,13 @@ Mtx* CSVReader::GetMatrix()
 		for (auto str : cols)
 		{
 			try {
+				
+				std::string colName = header[colIndex];
+				int correctIndex = indexDefinitions[colName];
+				
 				double val = std::stod(str);
-				(*m)(lineIndex, colIndex) = val;
+
+				(*m)(lineIndex, correctIndex) = val;
 				colIndex++;
 			}
 			catch (...) {
