@@ -74,6 +74,11 @@ std::vector<std::string> CSVReader::GetHeader() {
 Mtx* CSVReader::GetMatrix(std::map<std::string, int> indexDefinitions)
 {
 
+	std::cout << "column definitions: " << std::endl;
+	for (auto kv : indexDefinitions) {
+		std::cout << kv.first << " -> " << kv.second << std::endl;
+	}
+
 	bool headerSkipped = false;
 	std::vector<std::vector<double>> allRows;
 	int numCols = header.size();
@@ -95,7 +100,7 @@ Mtx* CSVReader::GetMatrix(std::map<std::string, int> indexDefinitions)
 			throw "Invalid CSV file: Header size != Line size at line " + std::to_string(lineIndex);
 		}
 
-		int colIndex = 1;
+		int colIndex = 0;
 		for (auto str : cols)
 		{
 			try {
