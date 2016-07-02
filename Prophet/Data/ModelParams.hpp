@@ -45,10 +45,11 @@ public:
 	}
 
 
-	
+
 
 	static void Save(Model& model, std::string name, Mtx& data) {
 
+		std::cout << "saving " << name << std::endl << data << std::endl;
 
 		DatabaseSession session;
 
@@ -82,10 +83,11 @@ public:
 		cass_collection_free(dimensions);
 
 		if (rc != CASS_OK) {
-			cass_future_free(future);
-
-			throw std::string("Failed to execute query: ")
+			auto err = std::string("Failed to execute query: ")
 				+ CassandraUtils::GetCassandraError(future);
+
+			cass_future_free(future);
+			throw err;
 		}
 		cass_future_free(future);
 
@@ -97,7 +99,7 @@ public:
 		DatabaseSession session;
 
 		CassStatement* statement = cass_statement_new(
-			"delete from prophet.modelparams where model_id = ?",1);
+			"delete from prophet.modelparams where model_id = ?", 1);
 
 
 		cass_statement_bind_uuid(statement, 0, model.ModelId());
@@ -118,7 +120,7 @@ public:
 
 	}
 
-	static void DeleteAll(Model& model, Guid ) {
+	static void DeleteAll(Model& model, Guid) {
 
 
 		DatabaseSession session;
@@ -163,7 +165,7 @@ public:
 		//std::vector<ModelParams*>* params = new std::vector<ModelParams*>;
 		std::vector<ModelParams*> params;
 		if (rc != CASS_OK) {
-			std::cout<<"Cassandra error! "<<rc << std::endl;
+			std::cout << "Cassandra error! " << rc << std::endl;
 
 			throw std::string("Failed to execute query")
 				+ CassandraUtils::GetCassandraError(future);
@@ -187,8 +189,8 @@ public:
 				size_t size = 0;
 				const cass_byte_t* buffer;
 				cass_value_get_bytes(cass_row_get_column(row, 3), &buffer, &size);
-				std::cout<<"loaded from cassandra:"<<size<<std::endl;
-				std::cout<<"first: "<<(buffer[0])<<std::endl;
+				std::cout << "loaded from cassandra:" << size << std::endl;
+				std::cout << "first: " << (buffer[0]) << std::endl;
 				CassIterator* inputvalues_iterator =
 					cass_iterator_from_collection(cass_row_get_column(row, 4));
 
@@ -200,21 +202,21 @@ public:
 				}
 
 				const double* d = reinterpret_cast<const double*>(buffer);
-				
-				std::cout<<"first d: "<<(d[0])<<std::endl; 
+
+				std::cout << "first d: " << (d[0]) << std::endl;
 
 				double* mtxdata = const_cast<double*>(d);
 
-				std::cout<<"first mtx: "<<(mtxdata[0])<<std::endl;
+				std::cout << "first mtx: " << (mtxdata[0]) << std::endl;
 
-				double* newbuf = new double[size/8];
+				double* newbuf = new double[size / 8];
 
-				std::memcpy(newbuf,mtxdata,size);
+				std::memcpy(newbuf, mtxdata, size);
 
 				p->m_mtx = new Mtx(FSView(p->Rows(), p->Cols(), newbuf, p->Rows()));
-				
-				std::cout<<*(p->m_mtx)<<std::endl;
-				
+
+				std::cout << *(p->m_mtx) << std::endl;
+
 				cass_iterator_free(inputvalues_iterator);
 				params.push_back(p);
 				//params->push_back(p);
@@ -227,7 +229,7 @@ public:
 		cass_future_free(future);
 		cass_statement_free(statement);
 
-		std::cout<<"Finished loading params."<<std::endl;
+		std::cout << "Finished loading params." << std::endl;
 
 		return params;
 
@@ -236,31 +238,31 @@ public:
 	static std::map<std::string, ModelParams*> LoadParameters(Guid modelId)
 	{
 
-		std::cout<< "Loading params..."<<std::endl;
+		std::cout << "Loading params..." << std::endl;
 
 		std::vector<ModelParams*> params = Load(modelId);
 
-		std::cout<<"params loaded "<<std::endl;
+		std::cout << "params loaded " << std::endl;
 
-		std::cout<<"num theta:"<<params.size()<<std::endl;
+		std::cout << "num theta:" << params.size() << std::endl;
 
 		std::map<std::string, ModelParams*> mapParams;
 
-		std::cout<<"instance of map created"<<std::endl;
+		std::cout << "instance of map created" << std::endl;
 
 
 		for (ModelParams* parm : params) {
 
-			std::cout<<(parm)<<std::endl;
-			std::cout<<"Dereferencing last address"<<std::endl;
+			std::cout << (parm) << std::endl;
+			std::cout << "Dereferencing last address" << std::endl;
 
-			ModelParams p  = *parm;
-			std::cout<<"Dereferenced!"<<std::endl;
+			ModelParams p = *parm;
+			std::cout << "Dereferenced!" << std::endl;
 
-			std::cout<<p.VarName()<<std::endl;
+			std::cout << p.VarName() << std::endl;
 
-			std::cout<<"Rows: "<<p.Rows()<<std::endl;
-			std::cout<<"Cols: "<<p.Cols()<<std::endl;
+			std::cout << "Rows: " << p.Rows() << std::endl;
+			std::cout << "Cols: " << p.Cols() << std::endl;
 
 			mapParams.emplace(p.VarName(), parm);
 

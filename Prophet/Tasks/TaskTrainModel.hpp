@@ -51,12 +51,16 @@ private:
 
 				}
 
+				std::cout << "Saving min and max params";
+
 				Mtx mtxMin(1, 1);
 				mtxMin(1, 1) = valMin;
+				std::cout << "min: "<<mtxMin<<std::endl;
 
 
 				Mtx mtxMax(1, 1);
 				mtxMax(1, 1) = valMax;
+				std::cout << "max: " << mtxMin << std::endl;
 
 				std::string varmin = cols[column-1] + "_min";
 				std::string varmax = cols[column - 1] + "_max";
