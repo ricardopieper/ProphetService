@@ -62,6 +62,17 @@ private:
 			modelColumns.push_back(m->OutputVariable());
 
 			//ok, does the file have all the columns of the model?
+			std::cout << "model columns: " << std::endl;
+			for (std::string modelCol : modelColumns) {
+				std::cout << modelCol << std::endl;
+			}
+			std::cout << std::endl;
+			std::cout << "file columns: " << std::endl;
+			for (std::string fileCol : fileHeader) {
+				std::cout << fileCol << std::endl;
+			}
+
+
 			//for each col in model, check if exists on file. If doesnt, then exception.
 
 			std::map<std::string, int> indexDefs;
@@ -76,11 +87,7 @@ private:
 
 					std::string err = "Error while processing: make sure the columns in your CSV"
 						" file match the variables that you chose in the model. Column not found in your file: "+ modelCol;
-
-					upload->SetProcessed(true);
-					upload->SetResult(err);
-					upload->Save();
-
+					
 					throw err;
 				}
 
@@ -118,6 +125,7 @@ private:
 			upload->SetProcessed(true);
 			upload->SetResult(err);
 			upload->Save();
+			std::cout << err;
 		}
 
 		delete mtx;
