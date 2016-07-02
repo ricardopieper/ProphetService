@@ -100,7 +100,7 @@ public:
 				}
 				cass_future_free(future);
 				cass_batch_free(batch);
-				cass_prepared_free(prepared);
+				//cass_prepared_free(prepared);
 				remainingRows -= rowsToInsert;
 				
 				std::cout << "Inserted " << rowsToInsert << "/" << (mtx->numRows()) << " (" << remainingRows << " remaining)" << std::endl;
