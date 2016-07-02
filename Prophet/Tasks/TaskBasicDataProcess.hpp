@@ -103,7 +103,7 @@ public:
 			bmv->SetAverages(avgs);
 			bmv->Insert();
 		}
-
+		delete data;
 		delete bmv;
 
 	}
