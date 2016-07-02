@@ -73,8 +73,9 @@ private:
 
 				if (!Contains(fileHeader, modelCol))
 				{
+
 					std::string err = "Error while processing: make sure the columns in your CSV"
-						" file match the variables that you chose in the model.";
+						" file match the variables that you chose in the model. Column not found in your file: "+ modelCol;
 
 					upload->SetProcessed(true);
 					upload->SetResult(err);
