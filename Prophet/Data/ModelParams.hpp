@@ -85,9 +85,12 @@ public:
 		if (rc != CASS_OK) {
 			auto err = std::string("Failed to execute query: ")
 				+ CassandraUtils::GetCassandraError(future);
-
+			std::cout << "err " << err << std::endl;
 			cass_future_free(future);
 			throw err;
+		}
+		else {
+			std::cout << "success " << rc << std::endl;
 		}
 		cass_future_free(future);
 
