@@ -22,7 +22,7 @@ public:
 		DatabaseSession session;
 
 
-		int batchSize = 200;
+		int batchSize = 100;
 		int remainingRows = mtx->numRows();
 		std::cout << "rows: " << remainingRows << std::endl;
 		std::cout << "batch: " << batchSize << std::endl;
@@ -94,7 +94,7 @@ public:
 					cass_batch_free(batch);
 					std::string err = std::string("Failed to execute query: ")
 						+ CassandraUtils::GetCassandraError(future);
-
+					std::cout << err;
 					cass_future_free(future);
 					throw err;
 				}
