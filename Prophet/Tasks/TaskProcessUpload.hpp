@@ -108,7 +108,7 @@ private:
 
 			auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
-			m->SetIntColumn("millisecondslastprediction", milliseconds.count());
+			m->SetIntColumn("millisecondsupload", milliseconds.count());
 
 			TaskBasicDataProcess::Averages(m);
 
