@@ -10,10 +10,13 @@ For Linux, you'll need:
 
  - OpenBlas
  - CMake 2.8
+ - libuv
 
 For Linux, you need to install Openblas first. Compile and install OpenBlas according to the [OpenBlas's documentation](https://github.com/xianyi/OpenBLAS).
 
-After installing OpenBlas, run `cmake . & make`.
+Try running `cmake . & make`. If it fails because `libuv` is missing, please install [libuv](https://github.com/libuv/libuv).
+
+After installing OpenBlas and checking whether libuv is installed, run `cmake . & make`.
 
 ##Running
 To run the application, run `./ProphetService $IP $PORT`, where `$IP` and `$PORT` are the IP address and port of Cassandra's installation.
