@@ -12,7 +12,7 @@ For Linux, you'll need:
  - CMake 2.8
  - libuv
 
-For Linux, you need to install Openblas first. Compile and install OpenBlas according to the [OpenBlas's documentation](https://github.com/xianyi/OpenBLAS).
+For Linux, you need to install OpenBlas first. Compile and install OpenBlas according to [OpenBlas's documentation](https://github.com/xianyi/OpenBLAS).
 
 Try running `cmake . & make`. If it fails because `libuv` is missing, please install [libuv](https://github.com/libuv/libuv).
 
