@@ -3,6 +3,7 @@
 This is the background service of Prophet. 
 
 ##Build
+
 ProphetService can be compiled both on Linux and Windows. However, currently the Windows version does not use OpenBlas. 
 For Windows, open ProphetService.sln on Visual Studio.
 
@@ -19,4 +20,7 @@ Try running `cmake . & make`. If it fails because `libuv` is missing, please ins
 After installing OpenBlas and checking whether libuv is installed, run `cmake . & make`.
 
 ##Running
+
+You'll need to install Cassandra first, and then run the ProphetWeb app first, to create the database tables.
+
 To run the application, run `./ProphetService $IP $PORT`, where `$IP` and `$PORT` are the IP address and port of Cassandra's installation.
