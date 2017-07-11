@@ -19,7 +19,7 @@ Try running `cmake . & make`. If it fails because `libuv` is missing, please ins
 
 After installing OpenBlas and checking whether libuv is installed, run `cmake . & make`.
 
-##Running
+## Running
 
 You'll need to install Cassandra first, and then run the ProphetWeb app first, to create the database tables.
 
