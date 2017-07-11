@@ -2,7 +2,7 @@
 
 This is the background service of Prophet. 
 
-##Build
+## Build
 
 ProphetService can be compiled both on Linux and Windows. However, currently the Windows version does not use OpenBlas. 
 For Windows, open ProphetService.sln on Visual Studio.
